@@ -1,0 +1,1 @@
+Pot - Represents the amount of cash that has been put in this round, if previous match has been a draw the amount that has been inserted from the previous match stays, you can either empty the pot, or you can add money and also you can customize it in multiplication of 10.
