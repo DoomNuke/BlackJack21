@@ -6,6 +6,6 @@ Cards_List_init(Cards_List *cards);
 //Freeing the allocated cards each round//
 Cards_List_Free(Cards_List *cards){
     if (cards->length > 0){
-        free(Cards_List)
+        free(
     }
 };
