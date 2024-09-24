@@ -28,31 +28,34 @@ void Cards_Add (Cards_List *cards, Card *m_card)
 }
 
 Card * Card_Remove(Cards_List *cards){
-    if (cards->length == 0) return NULL;
-    {
-        Card *off_card = cards->head;
-        cards->length--;
-    }
-    if (cards->length == 0){
-        cards->head = NULL;
-        cards->tail = NULL;
-    }
+if (cards->length == 0) return NULL;
+{
+Card *outcard = cards->head;
+cards->length--;
 
-    else
-    //y u no work TODO: commit arson om C's official language creator//
-    //                     ||                       //
-    //                     ||                       //
-    //                     \/                       //
-    {
-        cards -> head = off_card -> 
-    }
+        if (cards->length == 0)
+        {
+            cards->head = NULL;
+            cards->tail = NULL;
+        }
+        //Pulling out a card and then pointing it to NULL value in order to remove it from the linked list - sort of a pop method//
+            else
+            {
+                cards -> head = outcard -> next;  
+            }
+outcard -> next = NULL;
+return outcard;
+ }
 }
 
-void Card_List_Off(Cards_List *cards)
+
+
+void Card_List_Free(Cards_List *cards)
 {
-    while (cards -> length > 0){
-        free(Card_Remove(cards));
-    }
+    while (cards -> length > 0)
+        {
+            free(Card_Remove(cards));
+        }
 }
 
 #endif 
